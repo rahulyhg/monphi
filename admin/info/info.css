@@ -1,0 +1,20 @@
+body {
+	color: #333;
+	margin: 20px;
+	padding: 0px;
+	font-size: 11px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	text-align:justify;
+	line-height:175%;
+	}
+input, textarea {
+	border:1px solid #333;
+	}
+input:focus, textarea:focus {
+	border:1px solid #036;
+	background-color:#ff9;
+	}
+img{border:0px;}
+h2 {
+	border-bottom:3px #333 solid;
+	}

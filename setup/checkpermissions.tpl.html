@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		Monphi CMS - Setup
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("../css/monphi-admin.css");
+		@import url("../css/monphi.css");
+	</style>
+	<!-- 		@import url("./style.css"); -->
+</head>
+
+<body>
+<!-- Form here -->
+<div class="content">
+	<div style="text-align:center;">
+		<a href="index.php"><img src="../img/monphi/banner.jpg" alt="Monphi" title="monphi" style="border:1px #ccc solid; border-bottom: 2px solid #333; -webkit-border-radius: 5px; -moz-border-radius: 5px;" /></a>
+	</div>
+	<br /><br />
+	<div style="text-align:center; font-weight:bold;">
+		Reset File Permission Changes
+	</div>
+	<br /><br />
+	<b><u>Reset File Permissions</u></b><br />
+	<br />
+	Change the file permissions on the database configuration file conf/dbc.conf.php and robots.txt back to read only for the web server.
+	<br />
+	<pre style="border:1px #333 solid; padding:3px; background-color:#eee; font-weight:bold;">
+<!-- <span style="font-size:1.4em;"># chmod 644 conf/monphi.conf.php</span> -->
+<span style="font-size:1.4em;"># chmod 644 conf/dbc.conf.php</span>
+<span style="font-size:1.4em;"># chmod 644 robots.txt</span>
+</pre>
+
+
+	<br />
+	Testing the current permissions<br /><br />
+
+	<div style="border:1px #333 solid; padding:3px; background-color:#eee; font-weight:bold;">
+		[content]
+	</div>
+
+	<br /><br />
+	<div style="text-align:center;">
+<!--
+	<form action="[frmAction]" method="post">
+		<input type="hidden" name="id" value="" />
+		<input name="submit" type="submit" value="ReCheck Permissions" />
+	</form>
+	<br />
+-->
+		[continue]
+	</div>
+</div>
+<!-- End Form Here -->
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		Monphi CMS - Content Add New Page 
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("../css/monphi-admin.css");
+		@import url("../css/monphi.css");
+	</style>
+	<script type="text/javascript" language="javascript" src="../js/pop.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/simple_editor.js"></script>
+	<script type="text/javascript" language="javascript">
+		var currentTime = new Date()
+		var month = currentTime.getMonth() + 1
+		if (month < 10)
+			month = "0"+month.toString()
+		var day = currentTime.getDate()
+		if (day < 10)
+			day = "0"+day.toString()
+		var year = currentTime.getFullYear()
+		var date = year+"-"+month+"-"+day
+	</script>
+</head>
+
+<body OnLoad="document.getElementById('url').focus(); document.getElementById('dateadded').value=date; document.getElementById('datemod').value=date;">
+[admin]
+<!-- Form here -->
+<div class="content">
+	<div style="text-align:center;">
+		<a href="index.php"><img src="../img/monphi/banner.jpg" alt="Monphi" title="monphi" style="border:1px #ccc solid; border-bottom: 2px solid #333; -webkit-border-radius: 5px; -moz-border-radius: 5px;" /></a>
+		[errorMsg]
+	</div>
+	<br /><br />
+	<div style="text-align:center; font-weight:bold;">
+		Content Add New Page
+	</div>
+	<br /><br />
+	<div class="listmenu">
+		<a href="content.php"><img src="../img/monphi/fugue-icons-2.4.3/arrow-curve-180.png" style="vertical-align:middle; float:left; padding-right:1em;" alt="Return to Content Management" title="Return to Content Management" /></a>
+		<a href="content_add.php" style="float:left;" title="Add New Page"><img src="../img/monphi/fugue-icons-2.4.3/plus-small.png" style="vertical-align:middle;" alt="add" title="add" /> Add New Page</a>
+		<a href="content_edit.php" title="Select a Page to Edit"><img src="../img/monphi/fugue-icons-2.4.3/plus-small.png" style="vertical-align:middle;" alt="edit" title="edit" />/<img src="../img/monphi/fugue-icons-2.4.3/minus-small.png" style="vertical-align:middle;" alt="edit" title="edit" /> Edit a Page</a>
+		<a href="content_delete.php" style="float:right;" title="Select a Page to Delete"><img src="../img/monphi/fugue-icons-2.4.3/minus-small.png" style="vertical-align:middle;" alt="delete" title="delete" /> Delete a Page</a>
+	</div>
+	<br />
+
+	<form action="[frmAction]" method="post">
+	<!-- form method="post" action="/contact/" -->
+<table cellspacing="0" padding="0">
+	<tr><td style="width:200px;">&nbsp;</td><td>&nbsp;</td></tr>
+
+	<tr>
+		<td colspan="2" class="adminheader">
+			PAGE LOCATION
+			<a href="JavaScript:winpop2('info/content_page_location.html;content_page_location;500;400')">
+				<img src="../img/monphi/fugue-icons-2.4.3/information-frame.png" style="vertical-align:middle; float:right;" alt="Information" title="Information (free icons at http://www.pinvoke.com/)" />
+			</a>
+		</td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">URL Alias :</td>
+		<td style="padding:5px;"><input name="url" id="url" type="text" size="40" value="" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Set as default page :</td>
+		<td style="padding:5px;"><input class="check" name="boolIndex" id="boolIndex" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Set as default error page :</td>
+		<td style="padding:5px;"><input class="check" name="boolError" id="boolError" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+
+<!--
+	<tr>
+		<td colspan="2" style="padding:5px; text-align:center;">Old stuff below</td>
+	</tr>
+
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Section :</td>
+		<td style="padding:5px;"><input name="section" id="section" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Page :</td>
+		<td style="padding:5px;"><input name="page" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Article :</td>
+		<td style="padding:5px;"><input name="article" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+-->
+	<tr>
+		<td colspan="2" class="adminheader">
+			<br /><br /><br />MAIN CONTENT
+			<a href="JavaScript:winpop2('info/content_main_content.html;content_main_content;500;400')">
+				<img src="../img/monphi/fugue-icons-2.4.3/information-frame.png" style="vertical-align:middle; float:right;" alt="Information" title="Information (free icons at http://www.pinvoke.com/)" />
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Template File Name:</td>
+		<td style="padding:5px;"><input name="template" type="text" size="40" value="main.tpl.html" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)</td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Title (HTML Browser Window) :</td>
+		<td style="padding:5px;"><input name="htmltitle" type="text" size="40" value="" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Page Title (like h1, h2, etc):</td>
+		<td style="padding:5px;"><input name="pagetitle" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Main Content :</td>
+		<td style="padding:5px;">
+			<div style="width:400px; text-align:center; padding-top:10px;">
+<!--
+				<a><img src="../img/font.png" alt="font" title="font" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+				<a><img src="../img/color_swatch.png" alt="color" title="color" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+				<img src="../img/editor_separator2.gif" alt="Horizontal Rule" />
+-->
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[b]', '[/b]') : se_append_selected('content', '<b>', '</b>')"><img src="../img/monphi/editor_bold.gif" alt="bold" title="bold" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[i]', '[/i]') :se_append_selected('content', '<i>', '</i>');"><img src="../img/monphi/editor_italic.gif" alt="italic" title="italic" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[u]', '[/u]') :se_append_selected('content', '<u>', '</u>');"><img src="../img/monphi/editor_underline.gif" alt="underline" title="underline" /></a>
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[left]', '[/left]') :se_append_selected('content', '<left>', '</left>');"><img src="../img/monphi/editor_justifyleft.gif" alt="left" title="left" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[center]', '[/center]') :se_append_selected('content', '<center>', '</center>');"><img src="../img/monphi/editor_justifycenter.gif" alt="center" title="center" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[right]', '[/right]') :se_append_selected('content', '<right>', '</right>');"><img src="../img/monphi/editor_justifyright.gif" alt="right" title="right" /></a>
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[quote]', '[/quote]') :se_append_selected('content', '<div class=&quot;quote&quot;><span class=&quot;lquote&quot;>&amp;#8220;</span>', '<span class=&quot;rquote&quot;>&amp;#8221;</span></div>');"><img src="../img/monphi/editor_quotes.gif" alt="quote" title="quote" /></a>&nbsp;&nbsp;&nbsp;
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[code]', '[/code]') :se_append_selected('content', '<pre class=&quot;code&quot;>', '</pre>');" style="vertical-align:top; text-decoration:none;">code</a>&nbsp;&nbsp;&nbsp;
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_append_selected('content', '[img]', '[/img]') :se_html_insert_img('content');"><img src="../img/monphi/fugue-icons-2.4.3/images.png" alt="image" title="image" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+				<a href="JavaScript:(document.getElementById('boolBBCode').checked) ? se_bb_insert_url('content') :se_html_insert_url('content');"><img src="../img/monphi/famfamfam_silk_icons_v013/world_link.png" alt="url" title="url" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+			</div>
+			<textarea name="content" id="content" type="textarea" cols="35" rows="15" style="vertical-align:top; width:100%;" wrap="off"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Use BB Code instead of HTML :</td>
+		<td style="padding:5px;"><input class="check" name="boolBBCode" id="boolBBCode" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+
+	[contentmodule]
+
+
+	<tr>
+		<td colspan="2" class="adminheader">
+			<br /><br /><br />BASIC PHP BLOCK INCLUDE MODULES
+			<a href="JavaScript:winpop2('info/content_basic_php_blocks.html;content_basic_php_blocks;500;400')">
+				<img src="../img/monphi/fugue-icons-2.4.3/information-frame.png" style="vertical-align:middle; float:right;" alt="Information" title="Information (free icons at http://www.pinvoke.com/)" />
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Use "Include" (module) :</td>
+		<td style="padding:5px;"><input class="check" name="boolInclude" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Path for "Include" (module) :</td>
+		<td style="padding:5px;"><input name="includePath" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+<!--
+	<tr>
+		<td colspan="2" class="adminheader">
+			<br /><br /><br />NEWS DATA
+			<a href="JavaScript:winpop2('info/content_news_data.html;content_news_data;500;400')">
+				<img src="../img/monphi/fugue-icons-2.4.3/information-frame.png" style="vertical-align:middle; float:right;" alt="Information" title="Information (free icons at http://www.pinvoke.com/)" />
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Show on News Page :</td>
+		<td style="padding:5px;"><input class="check" name="boolDisplayNews" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">List in News Archive :</td>
+		<td style="padding:5px;"><input class="check" name="boolArchiveNews" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Display "page title" (from above) as the news title:</td>
+		<td style="padding:5px;"><input class="check" name="boolNewsPagetitle" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Use the News Content Below on news page (should include link in contentNews) :</td>
+		<td style="padding:5px;"><input class="check" name="boolNewsContent" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Read More Link :</td>
+		<td style="padding:5px;"><input class="check" name="boolNewsMore" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">News Content (to be displayed on news page):</td>
+		<td style="padding:5px;">
+			<div style="width:400px; text-align:center; padding-top:10px;">
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[b]', '[/b]') : se_append_selected('contentNews', '<b>', '</b>')"><img src="../img/monphi/editor_bold.gif" alt="bold" title="bold" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[i]', '[/i]') :se_append_selected('contentNews', '<i>', '</i>');"><img src="../img/monphi/editor_italic.gif" alt="italic" title="italic" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[u]', '[/u]') :se_append_selected('contentNews', '<u>', '</u>');"><img src="../img/monphi/editor_underline.gif" alt="underline" title="underline" /></a>
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[left]', '[/left]') :se_append_selected('contentNews', '<left>', '</left>');"><img src="../img/monphi/editor_justifyleft.gif" alt="left" title="left" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[center]', '[/center]') :se_append_selected('contentNews', '<center>', '</center>');"><img src="../img/monphi/editor_justifycenter.gif" alt="center" title="center" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[right]', '[/right]') :se_append_selected('contentNews', '<right>', '</right>');"><img src="../img/monphi/editor_justifyright.gif" alt="right" title="right" /></a>
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[quote]', '[/quote]') :se_append_selected('contentNews', '<div class=&quot;quote&quot;><span class=&quot;lquote&quot;>&amp;#8220;</span>', '<span class=&quot;rquote&quot;>&amp;#8221;</span></div>');"><img src="../img/monphi/editor_quotes.gif" alt="quote" title="quote" /></a>&nbsp;&nbsp;&nbsp;
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[code]', '[/code]') :se_append_selected('contentNews', '<pre class=&quot;code&quot;>', '</pre>');" style="vertical-align:top; text-decoration:none;">code</a>&nbsp;&nbsp;&nbsp;
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[img]', '[/img]') :se_html_insert_img('contentNews');"><img src="../img/monphi/fugue-icons-2.4.3/images.png" alt="image" title="image" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_bb_insert_url('contentNews') :se_html_insert_url('contentNews');"><img src="../img/monphi/famfamfam_silk_icons_v013/world_link.png" alt="url" title="url" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+			</div>
+			<textarea name="contentNews" id="contentNews" type="textarea" cols="35" rows="15" style="vertical-align:top; width:100%" wrap="off"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;"><div style="display:none;">Use BB Code instead of HTML :</div></td>
+		<td style="padding:5px;"><div style="display:none;"><input class="check" name="boolBBCodeNews" id="boolBBCodeNews" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></div></td>
+	</tr>
+-->
+
+
+<!--
+	<tr>
+		<td colspan="2" class="adminheader">
+			<br /><br /><br />SITEMAP
+			<a href="JavaScript:winpop2('info/content_sitemap.html;content_sitemap;500;400')">
+				<img src="../img/monphi/fugue-icons-2.4.3/information-frame.png" style="vertical-align:middle; float:right;" alt="Information" title="Information (free icons at http://www.pinvoke.com/)" />
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Change Frequency:</td>
+		<td style="padding:5px;">
+			<select name="changefreq">
+				<option value="always">always</option>
+				<option value="hourly">hourly</option>
+				<option value="daily">daily</option>
+				<option value="weekly">weekly</option>
+				<option value="monthly">monthly</option>
+				<option value="yearly">yearly</option>
+				<option value="never" selected>never</option>
+			</select>
+		</td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Priority :</td>
+		<td style="padding:5px;">
+			<select name="priority">
+				<option value="0.0">0.0</option>
+				<option value="0.1">0.1</option>
+				<option value="0.2">0.2</option>
+				<option value="0.3">0.3</option>
+				<option value="0.4">0.5</option>
+				<option value="0.5" selected>0.5</option>
+				<option value="0.6">0.6</option>
+				<option value="0.7">0.7</option>
+				<option value="0.8">0.8</option>
+				<option value="0.9">0.9</option>
+				<option value="1.0">1.0</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Hide from Sitemap :</td>
+		<td style="padding:5px;"><input class="check" name="boolSitemapHide" id="boolSitemapHide" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+-->
+
+	<tr><td colspan="2" class="adminheader"><br /><br /><br />LINK A BLOCK MODULE TO THIS PAGE</td></tr>
+	<tr>
+		<td style="padding:5px;">Choose a block module to link (Multiple blocks can be added with multiple edits) :</td>
+		<td style="padding:5px;">* Block modules can be added while editing the content</td>
+	</tr>
+
+	<tr>
+		<td colspan="2" class="adminheader">
+			<br /><br /><br />DATES
+			<a href="JavaScript:winpop2('info/content_dates.html;content_dates;500;400')">
+				<img src="../img/monphi/fugue-icons-2.4.3/information-frame.png" style="vertical-align:middle; float:right;" alt="Information" title="Information (free icons at http://www.pinvoke.com/)" />
+			</a>
+		</td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Creation Date (mysql format yyyy-mm-dd):</td>
+		<td style="padding:5px;">
+			<a onclick="JavaScript:document.getElementById('dateadded').value=date">
+				<img onmouseover="this.style.cursor='pointer';" src="../img/monphi/famfamfam_silk_icons_v013/date_go.png" alt="Add Todays Date" title="Add Todays Date" style="vertical-align:middle;" />
+			</a>
+			<input name="dateadded" id="dateadded" type="text" size="40" value="" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Modification Date (mysql format yyyy-mm-dd) :</td>
+		<td style="padding:5px;">
+			<a onclick="JavaScript:document.getElementById('datemod').value=date">
+				<img onmouseover="this.style.cursor='pointer';" src="../img/monphi/famfamfam_silk_icons_v013/date_go.png" alt="Add Todays Date" title="Add Todays Date" style="vertical-align:middle;" />
+			</a>
+			<input name="datemod" id="datemod" type="text" size="40" value="" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="padding:5px; text-align:center;">
+			<input type="hidden" name="id" value="" />
+			<input name="token" type="hidden" value="[token]" />
+			<input class="button_submit" name="submit" type="submit" value="" />
+			<!--<input name="submit" type="submit" value="submit" />-->
+		</td>
+	</tr>
+</table>
+	</form>
+</div>
+<!-- End Form Here -->
+</body>
+</html>

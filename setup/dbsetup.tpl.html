@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		Monphi CMS - Setup Database and Credentials 
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("./style.css");
+		@import url("../css/monphi.css");
+	</style>
+</head>
+
+<body>
+<!-- Form here -->
+<div class="content">
+	<div style="text-align:center;">
+		<a href="index.php"><img src="../img/monphi/banner.jpg" alt="Monphi" title="monphi" style="border:1px #ccc solid; border-bottom: 2px solid #333; -webkit-border-radius: 5px; -moz-border-radius: 5px;" /></a>
+	</div>
+	<br /><br />
+	<div style="text-align:center; font-weight:bold;">
+		Database and Credentials
+	</div>
+	<br /><br />
+
+
+	You will have to manually create the database to store the data in.
+	<pre style="border:1px #333 solid; padding:3px; background-color:#eee; font-weight:bold;">
+# mysql&gt; create database <i><span style="color:#900;">database_name</span></i>;</pre>
+	<br />
+	We will be using <b>two sets of credentials</b> the first will be the <b>basic access</b> allowing "select" requests so we can read database information. The second set of credentials will be used for the <b>administrative access</b> and the creation of the database. The administrative credential set will require "create", "insert", "select" and "update" query access.
+	<pre style="border:1px #333 solid; padding:3px; background-color:#eee; font-weight:bold;">
+# mysql&gt; grant select on <i><span style="color:#900;">database_name</span></i>.<i><span style="color:#900;">*</span></i> to '<i><span style="color:#900;">user</span></i>'@'<i><span style="color:#900;">localhost</span></i>' identified by
+	'<i><span style="color:#900;">password</span></i>';
+# mysql&gt; grant create, insert, select, update, delete on <i><span style="color:#900;">database_name</span></i>.<i><span style="color:#900;">*</span></i> to 
+	'<i><span style="color:#900;">user</span></i>'@'<i><span style="color:#900;">localhost</span></i>' identified by '<i><span style="color:#900;">password</span></i>';</pre>
+
+	<br />
+	The information provided will be added to the configuration file <b>conf/dbc.conf.php</b>.
+	<br />
+	<form action="[frmAction]" method="post">
+	<!-- form method="post" action="/contact/" -->
+	[errorMsg]
+	<br />
+<table cellspacing="0" padding="0">
+	<tr><td style="width:200px;">&nbsp;</td><td>&nbsp;</td></tr>
+
+	<tr><td colspan="2" style="border-bottom:3px #333 solid; font-weight:bold;font-size:1.10em;">DATABASE NAME</td></tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;"><span id="select">Database :</span></td>
+		<td style="padding:5px;"><input name="database" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+
+	<tr><td style="width:200px;">&nbsp;</td><td>&nbsp;</td></tr>
+
+	<tr><td colspan="2" style="border-bottom:3px #333 solid; font-weight:bold;font-size:1.10em;">DATABASE BASIC CREDENTIALS (SELECT)</td></tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;"><span id="select">User :</span></td>
+		<td style="padding:5px;"><input name="user" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;"><span id="select">Password :</span></td>
+		<td style="padding:5px;"><input name="password" type="password" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+
+	<tr><td style="width:200px;">&nbsp;</td><td>&nbsp;</td></tr>
+
+	<tr><td colspan="2" style="border-bottom:3px #333 solid; font-weight:bold;font-size:1.10em;">DATABASE ADMINISTRATIVE CREDENTIALS (CREATE, INSERT, SELECT, UPDATE)</td></tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;"><span id="admin">User :</span></td>
+		<td style="padding:5px;"><input name="user2" type="text" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;"><span id="admin">Password :</span></td>
+		<td style="padding:5px;"><input name="password2" type="password" size="40" value="" style="vertical-align:middle;" /></td>
+	</tr>
+
+	<tr>
+		<td colspan="2" style="padding:5px; text-align:center;">
+			<br />
+			<span style="color:#900;">* If you receive any errors on the next page test the credentials you provided, remove any tables created and reload the page.</span>
+			<br /><br />
+			<input type="hidden" name="id" value="" />
+			<input class="button_submit" name="submit" type="submit" value="" />
+		</td>
+	</tr>
+</table>
+	</form>
+</div>
+<!-- End Form Here -->
+</body>
+</html>

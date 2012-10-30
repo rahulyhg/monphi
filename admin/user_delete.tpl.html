@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		Monphi CMS - User Delete
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("../css/monphi-admin.css");
+		@import url("../css/monphi.css");
+	</style>
+	<script LANGUAGE="JavaScript">
+	<!--
+		// Nannette Thacker http://www.shiningstar.net
+		// http://www.shiningstar.net/articles/articles/javascript/confirmsubmit.asp?shoeid=shoes&ID=AW
+		function confirmSubmit()
+		{
+		var agree=confirm("Are you sure you wish to delete this record?");
+		if (agree)
+			return true;
+		else
+			return false;
+		}
+	// -->
+	</script>
+</head>
+
+<body OnLoad="document.getElementById('id').focus();">
+[admin]
+<!-- Form here -->
+<div class="content">
+	<div style="text-align:center;">
+		<a href="index.php"><img src="../img/monphi/banner.jpg" alt="Monphi" title="monphi" style="border:1px #ccc solid; border-bottom: 2px solid #333; -webkit-border-radius: 5px; -moz-border-radius: 5px;" /></a><br />
+		[errorMsg]
+	</div>
+	<br /><br />
+	<div style="text-align:center; font-weight:bold;">
+		Select a User to Delete
+	</div>
+	<br /><br />
+	<div class="listmenu">
+		<a href="user.php"><img src="../img/monphi/fugue-icons-2.4.3/arrow-curve-180.png" style="vertical-align:middle; float:left; padding-right:1em;" alt="Return to User Management" title="Return to User Management" /></a>
+		<a href="user_add.php" style="float:left;" title="Add New User"><img src="../img/monphi/fugue-icons-2.4.3/plus-small.png" style="vertical-align:middle;" alt="add" title="add" /> Add New User</a>
+		<a href="user_edit.php" title="Select a User to Edit"><img src="../img/monphi/fugue-icons-2.4.3/plus-small.png" style="vertical-align:middle;" alt="edit" title="edit" />/<img src="../img/monphi/fugue-icons-2.4.3/minus-small.png" style="vertical-align:middle;" alt="edit" title="edit" /> Edit User</a>
+		<a href="user_delete.php" style="float:right;" title="Select a User to Delete"><img src="../img/monphi/fugue-icons-2.4.3/minus-small.png" style="vertical-align:middle;" alt="delete" title="delete" /> Delete User</a>
+	</div>
+	<br /><br />
+
+	<div style="text-align:center;">
+		<form action="[frmAction]" enctype="multipart/form-data" method="post" name="myform">
+		Select a User to Delete :<br /><br />
+		[content]
+		<br /><br />
+		<input class="button_delete" type="submit" id="submit" value="" onClick="return confirmSubmit()" />
+		</form>
+	</div>
+</div>
+<!-- End Form Here -->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		Monphi CMS - Content Page Location
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("./info.css");
+	</style>
+	<script type="text/javascript" language="javascript" src="../js/pop.js"></script>
+</head>
+
+<body>
+<h2>Page Location</h2>
+Page Location stores information which relates to the website location.
+<br /><br />
+<b>URL Alias</b><br />
+The URL Alias will determine the url from the base directory you copied the monphi files.
+<br /><br />
+When the input is proccessed it is then forced to be alpha, numeric, dashes, underscores and forward slashes.
+<br /><br />
+a-z, A-Z, or 0-9, -, _, /
+<br /><br />
+
+<b>Set as default page</b><br />
+This check box will determine what page to display if no URL input is found. E.G. entering the base directory of the monphi installation.
+<br /><br />
+
+<b>Set as default error page</b><br />
+The htaccess file will send any file input that cannot be found to index.php. The index.php will process the URL and query the URL input against the database. If no data can be found regarding that page a default error 404 page will be displayed. If you prefer to have a custom error message tick the "Set as default error page" and that page will load for all error 404's.
+</body>
+</html>

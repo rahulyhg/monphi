@@ -1,0 +1,172 @@
+img {border:0;}
+#monphi_menu_position {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	}
+#monphi_menu{
+	text-align:center;
+	background-color: #333;
+	height:22px;
+	border-bottom:1px #000 solid;
+	line-height:100%;
+	}
+#monphi_menu a {
+	border-right:1px #ccc solid;
+	color: #eee;
+	display: block;
+	float: left;
+	font-size:10px;
+	font-weight: bold;
+	padding: 5px;
+	margin: 0px;
+	text-decoration: none;
+	}
+#monphi_menu a:hover {
+	background-color: #c8d5e1;
+	color: #000;
+	}
+.editthispage {
+	background-color:#666;
+	}
+
+
+
+
+.button_admin_panel {
+	display: block;
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_admin_panel.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_admin_panel:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_admin_panel_hover.png);
+	}
+.button_continue {
+	display: block;
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_continue.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_continue:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_continue_hover.png);
+	}
+.button_delete {
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_delete.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_delete:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_delete_hover.png);
+	}
+.button_edit_this_page {
+	display: block;
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_edit_this_page.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_edit_this_page:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_edit_this_page_hover.png);
+	}
+.button_go_to_your_site {
+	display: block;
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_go_to_your_site.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_go_to_your_site:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_go_to_your_site_hover.png);
+	}
+.button_guided_setup {
+	display: block;
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_guided_setup.png);
+	margin: 0 auto;
+	}
+.button_guided_setup:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_guided_setup_hover.png);
+	}
+.button_load_modules {
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_load_modules.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_load_modules:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_load_modules_hover.png);
+	}
+.button_login {
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_login.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_login:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_login_hover.png);
+	}
+.button_recheck_permissions {
+	display: block;
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_recheck_permissions.png);
+	margin: 0 auto;
+	}
+.button_recheck_permissions:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_recheck_permissions_hover.png);
+	}
+.button_save_changes {
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_save_changes.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_save_changes:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_save_changes_hover.png);
+	}
+.button_submit {
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_submit.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_submit:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_submit_hover.png);
+	}
+.button_update {
+	width: 150px;
+	height: 25px;
+	background-image: url(../img/monphi/button_update.png);
+	margin: 0 auto;
+	border:0;
+	}
+.button_update:hover {
+	cursor:pointer;
+	background-image: url(../img/monphi/button_update_hover.png);
+	}

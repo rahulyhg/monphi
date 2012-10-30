@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		Monphi CMS - Setup
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("../css/monphi-admin.css");
+		@import url("../css/monphi.css");
+	</style>
+	<!-- 		@import url("./style.css"); -->
+</head>
+
+<body>
+[admin]
+<!-- Form here -->
+<div class="content">
+	<form action="[frmAction]" method="post">
+	<div style="text-align:center;">
+		<a href="index.php"><img src="../img/monphi/banner.jpg" alt="Monphi" title="monphi" style="border:1px #ccc solid; border-bottom: 2px solid #333; -webkit-border-radius: 5px; -moz-border-radius: 5px;" /></a>
+		[errorMsg]
+	</div>
+	<br /><br />
+	<div style="text-align:center; font-weight:bold;">
+		Preferences
+	</div>
+	<br /><br />
+	<div class="listmenu">
+		<a href="./"><img src="../img/monphi/fugue-icons-2.4.3/arrow-curve-180.png" style="vertical-align:middle; float:left; padding-right:1em;" alt="Return to Admin" title="Return to Admin" /></a>
+		&nbsp;
+	</div>
+	<br />
+
+<table cellspacing="0" padding="0" style="width:100%;">
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;"><b>Default Template :</b><br />(<i>This will modify the default template displayed in the content pages</i>)</td>
+		<td style="padding:5px;"><input name="template_default" id="template_default" type="text" size="20" value="./main.tpl.html" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)</td>
+	</tr>
+
+	<tr>
+		<td style="padding:5px;"><b>Random Seed :</b><br />(<i>The random seed is used to generate random tokens.</i>)</td>
+		<td style="padding:5px;"><input name="auth_random_seed" id="auth_random_seed" type="text" size="20" value="" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)</td>
+	</tr>
+
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;"><b>Keep alive time in seconds :</b><br />(<i>determines how long tokens and sessions last. Default is 600 seconds or 10 minutes</i>)</td>
+		<td style="padding:5px;"><input name="auth_keep_alive" id="auth_keep_alive" type="text" size="3" value="600" style="vertical-align:middle;" required />(<span style="color:#c00;">*</span>)</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;"><b>Use authentication security token :</b><br />(<i>Recommended. A random security token will be generated on every page selection while logged in as a user.</i>)</td>
+		<td style="padding:5px;"><input class="check" name="auth_bool_use_token" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" checked /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;"><b>Require cookies to go over a secure connection :</b><br />(<i>Recommended, must have an HTTPS connection. This setting will generate all cookies as https only cookies.</i>)</td>
+		<td style="padding:5px;"><input class="check" name="auth_bool_use_HTTPS_cookies" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" checked /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;"><b>Verify IP Address for authenticated users :</b><br />(<i>Recommended. Will verify that the authenticated user has not changed IP addresses. IP addresses can easily be spoofed, certain ISP's or anonymizer systems may disconnect users.</i>)</td>
+		<td style="padding:5px;"><input class="check" name="auth_bool_check_IP_address" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" checked /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;"><b>Verify User Agent for authenticated users :</b><br />(<i>Recommended. Will verify that the authenticated users web browser does not change by checking the User-Agent. User-Agents can easily be spoofed, certain browsers may not be compatible.</i>)</td>
+		<td style="padding:5px;"><input class="check" name="auth_bool_check_user_agent" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" checked /></td>
+	</tr>
+</table>
+	<br /><br />
+	<div style="text-align:center;">
+		<input type="hidden" name="id" value="" />
+		<input class="button_submit" name="submit" type="submit" value="" />
+	<br />
+	</div>
+	</form>
+</div>
+<!-- End Form Here -->
+</body>
+</html>

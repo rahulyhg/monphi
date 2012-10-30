@@ -1,0 +1,59 @@
+	<tr>
+		<td colspan="2" class="adminheader">
+			<br /><br /><br />NEWS DATA (module)
+			<a href="JavaScript:winpop2('info/content_news_data.html;content_news_data;500;400')">
+				<img src="../img/monphi/fugue-icons-2.4.3/information-frame.png" style="vertical-align:middle; float:right;" alt="Information" title="Information (free icons at http://www.pinvoke.com/)" />
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Show on News Page :</td>
+		<td style="padding:5px;"><input class="check" name="boolDisplayNews" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">List in News Archive :</td>
+		<td style="padding:5px;"><input class="check" name="boolArchiveNews" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Display "page title" (from above) as the news title:</td>
+		<td style="padding:5px;"><input class="check" name="boolNewsPagetitle" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">Use the News Content Below on news page (should include link in contentNews) :</td>
+		<td style="padding:5px;"><input class="check" name="boolNewsContent" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr>
+		<td style="padding:5px;">Read More Link :</td>
+		<td style="padding:5px;"><input class="check" name="boolNewsMore" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></td>
+	</tr>
+	<tr style="background-color:#eee;">
+		<td style="padding:5px;">News Content (to be displayed on news page):</td>
+		<td style="padding:5px;">
+			<div style="width:400px; text-align:center; padding-top:10px;">
+<!--
+				<a><img src="../img/font.png" alt="font" title="font" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+				<a><img src="../img/color_swatch.png" alt="color" title="color" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+				<img src="../img/editor_separator2.gif" alt="Horizontal Rule" />
+-->
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[b]', '[/b]') : se_append_selected('contentNews', '<b>', '</b>')"><img src="../img/monphi/editor_bold.gif" alt="bold" title="bold" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[i]', '[/i]') :se_append_selected('contentNews', '<i>', '</i>');"><img src="../img/monphi/editor_italic.gif" alt="italic" title="italic" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[u]', '[/u]') :se_append_selected('contentNews', '<u>', '</u>');"><img src="../img/monphi/editor_underline.gif" alt="underline" title="underline" /></a>
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[left]', '[/left]') :se_append_selected('contentNews', '<left>', '</left>');"><img src="../img/monphi/editor_justifyleft.gif" alt="left" title="left" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[center]', '[/center]') :se_append_selected('contentNews', '<center>', '</center>');"><img src="../img/monphi/editor_justifycenter.gif" alt="center" title="center" /></a>
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[right]', '[/right]') :se_append_selected('contentNews', '<right>', '</right>');"><img src="../img/monphi/editor_justifyright.gif" alt="right" title="right" /></a>
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[quote]', '[/quote]') :se_append_selected('contentNews', '<div class=&quot;quote&quot;><span class=&quot;lquote&quot;>&amp;#8220;</span>', '<span class=&quot;rquote&quot;>&amp;#8221;</span></div>');"><img src="../img/monphi/editor_quotes.gif" alt="quote" title="quote" /></a>&nbsp;&nbsp;&nbsp;
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[code]', '[/code]') :se_append_selected('contentNews', '<pre class=&quot;code&quot;>', '</pre>');" style="vertical-align:top; text-decoration:none;">code</a>&nbsp;&nbsp;&nbsp;
+				<img src="../img/monphi/editor_separator2.gif" alt="Horizontal Rule" />
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_append_selected('contentNews', '[img]', '[/img]') :se_html_insert_img('contentNews');"><img src="../img/monphi/fugue-icons-2.4.3/images.png" alt="image" title="image" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+				<a href="JavaScript:(document.getElementById('boolBBCodeNews').checked) ? se_bb_insert_url('contentNews') :se_html_insert_url('contentNews');"><img src="../img/monphi/famfamfam_silk_icons_v013/world_link.png" alt="url" title="url" style="vertical-align:top;" /></a>&nbsp;&nbsp;&nbsp;
+			</div>
+			<textarea name="contentNews" id="contentNews" type="textarea" cols="35" rows="15" style="vertical-align:top; width:100%" wrap="off"></textarea>
+		</td>
+	</tr>
+	<!-- currently not functional just here for future and for use with javascript code above -->
+	<tr>
+		<td style="padding:5px;"><div style="display:none;">Use BB Code instead of HTML :</div></td>
+		<td style="padding:5px;"><div style="display:none;"><input class="check" name="boolBBCodeNews" id="boolBBCodeNews" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /></div></td>
+	</tr>

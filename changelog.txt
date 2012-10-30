@@ -1,0 +1,83 @@
+20121030
+	fixed the processing of get variables. in the "Process section and page input" section of the code, around line 150. Run explode on request_URI and modify php_self with the monphi URL
+	fixed auth use https cookies check with initial monphi_auth_token
+	Added 404 http headers to 404 error pages, in database pull and generic versions.
+	Fixed users "Last login" the feature appears have been broken adding the database query preferences. Added uid to $intUID in auth.php
+	Auth preferences are now pulled from database
+	Fixed file permission check on setup "checkpermissions.php" monphi.conf reports correct permissions
+	Changed verbiage on checkpermissions.php test writing now reads testing read permissions.
+	Changed content management for modules. where titles show (modules). e.g. change NEWS DATA to NEWS DATA (module)
+	Fixed content add addslashes. Variables were changed from request to post but the routine to 
+		remove addslashes, if enabled, was set to requests.
+	Fixed fatal error with apache_get_modules, via function_exists. If function does not exist check for HTTP_MOD_REWRITE. If that can't be found check php_sapi_name return. Tested against CGI API based server and it appears to be returning as expected.
+
+20110707
+	Changed how modules are done. They now have the ability to modify the content section of the admin interface.
+	page table no longer holds "module" rows.
+	Fixed log errors with pregmatch routines in tpl and form classes. Fixes error messages not displaying with block modules when the text of the block is in the page content without the block denotion characters "[]".
+	Fixed an issue with the password changes. Was using single = not double == in an if statement.
+	Consolidated configuration files to two locations. Database configurations reside in conf/dbc.conf.php while everything else resides in conf/monphi.conf.php.
+	Added security measures for user authentication. Using tokens, IP check, referer checks, and https cookies. Options can be changed in conf/monphi.conf.php
+	Cookies should be set to http_only now. (will only work with modern browsers).
+	Changed the default buttons to a slightly cleaner look.
+	Fixed delete to remove module_block_links and mod_... table records.
+	Auto Increment is reset with deletion of files for page, and mod_... records.
+
+20110603
+	Modified the URL handling. No more section, page, article. Simply now url.
+	Backend database changes for URL, error page, index page.
+	Added admin bar to the top of the page. With an "Edit This Page" link.
+	Changed the logo to a code monkey.
+	Authentication now handled in database.
+	Setup cleaned up, default pages changed.
+	Modified admin interface.
+	Added users to admin interface.
+	Cleaned up form process class, cleared some internal error messages.
+	Moved basic files : images under img/monphi, icons now note original creators. CSS now start with monphi.
+	Changed default errors, cleaner look with monphi monkey icon.
+
+20110126
+	Fixed double stripslashes if magic quote gpc is set by removing the form
+		processing class arrstripslashes function calls.
+	Fixed a handful of problems in the classes.
+		Template (tpl) class can now handle string along with the older flat file loading.
+		Error returns templates and modules have now been added and implemented into the engine.
+	An [error] linker must be added into the primary template file. This will
+		be used for error reporting unless suppressed (currently suppression can
+		only be done via a module, will be updated later)
+	All admin filenames have been changed instead of add_template change to template_add.
+	Added Hide from Sitemap feature in the "Page" section
+	Modules are loaded differently. Instead of using the [module] section
+		in the primary page the modules are no loaded into the content section
+		of each page. Each module will be loaded with [modulename].
+	Modules loaded in all pages no longer require to be added to any page. Instead
+		the [modulename] loading is now done in the primary HTML template file.
+	Modules have more fields (fileDelete, fileAdd, fileEdit, boolAltMenu, pathAltMenu) filename is
+		now fileName with a capital N in name. Was going to call it fileModule....
+	Module Loading into the main menu handles new fields paths and an alternate location
+		for the admin file for the module based on pathAltMenu field.
+	help section in admin interface.
+	Modules Sitemap has been added to installation. Changed from include to module.
+
+20100310
+	Fixed https referer for admin panel
+	Fixed referer authentication bug in admin panel
+	Added logout to admin panel
+	Added delete feature to admin panel
+	Added module edit ability
+	Added future functionality fields to admin panel
+	Fixed admin panel focus model via javascript
+	Text Area's now use javascript and use simple editor javascript features
+	Admin panel dates can now be populated by clicking the calendar icon next to them
+	Admin panel may have some 
+	Setup now states the "admin" user for the database requires delete capabilities.
+	Started module addition to the admin panel index *will most likely be redone*
+	Added some icons that are licensed under the Creative Commons
+		Silk icon set 1.3 - Creative Commons Attribution 2.5 License. - mjames@gmail.com
+		http://www.famfamfam.com/lab/icons/silk/
+		(calendar icon)
+		Fugue Icons - licensed under a Creative Commons Attribution 3.0 license - yusuke.kamiyamane@gmail.com
+		http://www.pinvoke.com/
+
+20091206
+	Initial Release

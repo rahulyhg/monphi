@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		Monphi CMS - Select Template to Edit
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("../css/monphi-admin.css");
+		@import url("../css/monphi.css");
+	</style>
+</head>
+
+<body OnLoad="document.getElementById('id').focus();">
+<!-- Form here -->
+[admin]
+<div class="content">
+	<center>
+		<div style="width:468px;">
+			<a href="index.php"><img src="../img/monphi/banner.jpg" alt="Monphi" title="monphi" style="border:1px #ccc solid; border-bottom: 2px solid #333; -webkit-border-radius: 5px; -moz-border-radius: 5px;" /></a><br />
+		</div>
+		<form action="[frmAction]" enctype="multipart/form-data" method="get" name="myform">
+			<br />
+			Page Selection :<br />
+			[content]
+			<!--<input type="submit" id="submit" value="submit" />-->
+			<!--<input name="submit" type="submit" id="submit" value="submit" />-->
+			<input class="button_submit" type="submit" id="submit" value="" />
+
+		</form>
+	</center>
+</div>
+<!-- End Form Here -->
+</body>
+</html>

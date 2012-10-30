@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>
+		The Monphi Engine - Edit Template
+	</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<style type="text/css" media="screen">
+		@import url("../../admin/style.css");
+	</style>
+	<script type="text/javascript" language="javascript" src="../../js/pop.js"></script>
+	<script type="text/javascript" language="javascript" src="../../js/simple_editor.js"></script>
+
+	<script type="text/javascript" language="javascript">
+		var currentTime = new Date()
+		var month = currentTime.getMonth() + 1
+		if (month < 10)
+			month = "0"+month.toString()
+		var day = currentTime.getDate()
+		if (day < 10)
+			day = "0"+day.toString()
+		var year = currentTime.getFullYear()
+		var date = year+"-"+month+"-"+day
+	</script>
+</head>
+
+<body OnLoad="document.getElementById('name').focus();">
+<!-- Form here -->
+<div class="content">
+	<center>
+		<div style="width:468px;">
+			<a href="index.php"><img src="../../img/banner.jpg" alt="Monphi" title="monphi" /></a><br />
+			<div style="text-align:right;"><a href="logout.php">Logout</a></div>
+
+		</div>
+		<br />
+		
+	</center>
+
+
+
+
+
+
+
+<div style="font-size:11px; font-weight:bold;">Add Comments</div>
+<!--
+<a href="JavaScript:display_hide_toggle('comments_block;block')" style="padding-left:15px; font-size:10px;">Add Comments</a><br />
+<div id="comments_block" style="display:none;">
+-->
+
+
+
+<form action="/" enctype="multipart/form-data" method="post">
+<!-- form method="post" action="/contact/" -->
+<div style="width:400px; padding-right:30px; padding-left:30px; font-size:10px;">
+<br />
+Name :<br />
+
+<input id="name" name="name" type="text" size="40" value="" /><br />
+Title : <br />
+<input name="title" type="text" size="40" value="" /><br />
+Comments :<br />
+<div style="width:400px; border:1px #333 solid; padding:10px;">
+	<a href="JavaScript:se_append_selected('comments', '[b]', '[/b]');"><img src="../../img/editor_bold.gif" alt="bold" title="bold" /></a>
+	<a href="JavaScript:se_append_selected('comments', '[i]', '[/i]');"><img src="../../img/editor_italic.gif" alt="italic" title="italic" /></a>
+	<a href="JavaScript:se_append_selected('comments', '[u]', '[/u]');"><img src="../../img/editor_underline.gif" alt="underline" title="underline" /></a>
+	<img src="../../img/editor_separator2.gif" alt="Horizontal Rule" />
+	<a href="JavaScript:se_append_selected('comments', '[left]', '[/left]');"><img src="../../img/editor_justifyleft.gif" alt="left" title="left" /></a>
+
+	<a href="JavaScript:se_append_selected('comments', '[center]', '[/center]');"><img src="../../img/editor_justifycenter.gif" alt="center" title="center" /></a>
+	<a href="JavaScript:se_append_selected('comments', '[right]', '[/right]');"><img src="../../img/editor_justifyright.gif" alt="right" title="right" /></a>
+	<img src="../../img/editor_separator2.gif" alt="Horizontal Rule" />
+	<a href="JavaScript:se_append_selected('comments', '[quote]', '[/quote]');"><img src="../../img/editor_quotes.gif" alt="quote" title="quote" /></a>&nbsp;&nbsp;&nbsp;
+	<a href="JavaScript:se_append_selected('comments', '[code]', '[/code]');" style="vertical-align:top; text-decoration:none;">code</a>&nbsp;&nbsp;&nbsp;
+	<a href="JavaScript:se_append_selected('comments', '[img]', '[/img]');"><img src="../../img/images.png" alt="image" title="image" /></a>&nbsp;&nbsp;&nbsp;
+	<a href="JavaScript:insert_url('comments');"><img src="../../img/world_link.png" alt="url" title="url" /></a>&nbsp;&nbsp;&nbsp;
+	<br />
+
+	<textarea name="comments" id="comments" type="textarea" cols="35" rows="9" style="width:100%;"></textarea><br />
+</div>
+
+
+
+
+Enter text from security image :<br />
+<div style="display:block;">
+	<div style="float:left; padding-right:5px;">
+		<img src="./captcha/CaptchaSecurityImages.php?width=160&height=25" style="height:25px; width:160px;" /><br />
+		Reset Security Image <input name="captcha_check_box" style="vertical-align:middle;padding-right:5px;" type="checkbox" value="1" /><br />
+
+	</div>
+	<input name="captcha" type="text" size="20" value="" /><br />
+</div>
+<div style="clear:both;"></div>
+<input name="edit" type="hidden" value="0" />
+<input name="id" type="hidden" value="" />
+<input name="submitted" type="hidden" value="1" />
+<input class="submitbutton" name="submit" type="submit" value="submit" />
+</div>
+</form>
+<!--
+</div>
+-->
+<br /><br /><!-- Page Process Time : 0.0664839744568 seconds -->

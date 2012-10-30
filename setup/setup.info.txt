@@ -1,0 +1,39 @@
+1. index.php
+	Checks permissions for
+		conf/monphi.conf.php -- removed
+		conf/dbc.conf.php
+		robots.txt
+	modifies robots.txt
+	sends to conf.php -- removed
+	sends to dbsetup.php --added
+/* removed
+2. conf.php
+	takes input for monphi.conf.php
+	modifies /setup/monphi.conf.php
+	sends to dbsetup.php
+*/
+3. dbsetup.php
+	takes input for database and database credentials
+	modifies dbc.conf.php
+	creates database
+	sends to adminsetup.php -- removed
+	sends to preferences.php
+
+x. preferences.php
+	gets preferences to submit to database
+	submit preferences to database
+	sends to adminsetup.php
+
+4. adminsetup.php
+	takes input for admin credentials
+	updates 'users' table
+	sends to checkpermissions.php
+5. checkpermissions.php
+	checks configuration for
+		conf/dbc.conf.php
+		robots.txt
+	sends to finish.html
+6. finish.html
+	recommends to remove setup folder.
+	info on creating template file.
+	sends to site index
